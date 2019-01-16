@@ -1,32 +1,300 @@
-.App {
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
+@import url("https://use.typekit.net/cww0cak.css");
+
+
+/* GLOBALS */
+
+div{
+  font-family: "acumin-pro";
+  font-weight: 100;
+}
+
+
+
+
+
+
+
+
+/* NAV CLASSES */
+
+.nav_container{
+  position: fixed;
+  width: 100vw;
+  z-index: 998;
+  text-align: right;
+  background-color: rgba(10,10,10,0.3);
+  box-shadow: 0px 0px 1000px 0px #666666;
+}
+
+.nav_text_primary{
+  color: white;
+  font-size: 16pt;
+  font-weight: 100;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 13px;
+  z-index: 999;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.nav_text_primary:hover{
+  background-color: white;
+  color: black;
+}
+
+.nav_link{
+  display: inline-block;
+  font-size: 14pt;
+  font-weight: 100;
+  padding: 15px 20px;
+  height: 100%;
+  color: white;
+  transition:.4s;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.nav_link:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+/* LANDING CLASSES */
+
+.landing-content{
+  text-align: center;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.landing-content-header{
+  font-size: 32pt;
+  padding: 40px 0px 10px 0px;
+}
+
+.landing-content-body-line{
+  font-size: 12pt;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* WHO CLASSES */
+
+.who-content{
+  text-align: center;
+  padding: 40px 20px;
+  display: inline-block;
+}
+
+.who-img{
+  width: 20%;
+  min-width: 250px;
+  padding: 10px 5%;
+  display: inline-block;
+}
+
+.who-text-block{
+  font-size: 12pt;
+  margin: 10px;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  min-width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+/* WHAT CLASSES */
+
+.card-container{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 40px 0px 80px 0px;
+}
+
+
+
+
+
+
+
+/* WHERE CLASSES */
+
+.where-icon{
+  width: 100px;
+  transition: .4s
+}
+
+.where-icon:hover{
+  width: 110px;
+  cursor: pointer;
+}
+
+.where-icon-link{
+  width: 110px;
+  height: 110px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 30px 30px;
+  vertical-align: top;
+  transition: .4s;
+}
+
+.where-icon-link:hover{
+  background-color: rgba(210,210,248,1);
+}
+
+
+
+/* BANNER CLASSES */
+
+.banner_container{
+  padding:0;
+  margin:0;
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0,0,0,1);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.banner_image{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+  width: 100%;
+  opacity: 0.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.banner_title{
+  position: absolute;
   color: white;
+  font-size: 72pt;
+  font-weight: 100;
+  letter-spacing: 3px;
+  right: 20px;
+  bottom: 65px;
+  width: 500px;
+  text-align: right;
+  line-height: .8;
 }
 
-.App-link {
-  color: #61dafb;
+.banner_subtitle{
+  position: absolute;
+  color: #dddddd;
+  font-size: 18pt;
+  font-weight: 100;
+  letter-spacing: 3px;
+  right: 25px;
+  bottom: 25px;
+  text-align: right;
+  line-height: .8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+
+
+/* CARD CLASSES */
+
+.card{
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 30px;
+  vertical-align: top;
+}
+
+.card-img{
+  width: 210px;
+  margin: 0;
+  padding: 0;
+  transition: .4s;
+}
+
+.card-img:hover{
+  width:220px;
+  cursor: pointer;
+}
+
+.card-title{
+  font-size: 16pt;
+  font-weight: 500;
+  line-height: .8;
+  padding-top: 10px;
+}
+
+.card-role{
+  font-size: 14pt;
+  font-weight: 100;
+  color: #666666;
+}
+
+.card-line{
+  font-size: 10pt;
+  font-weight: 100;
+  color: #888888;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER CLASSES */
+
+.footer-container{
+  width: 100vw;
+  height: 50px;
+  background-color: rgba(10,10,10,0.8);
+  text-align: center;
+  color: #dddddd;
+  letter-spacing: 4px;
+  padding-top: 20px;
 }
