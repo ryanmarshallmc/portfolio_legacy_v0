@@ -125,21 +125,22 @@ class App extends Component {
           <div className='tagBottomLeft' onClick={()=>this.toggleBottomLeft()}>what i look like</div>
 
           <div className={this.bottomLeft()} onClick={()=>this.toggleBottomLeft()}>
-            <div className='textBottomLeft'>Heyo!</div>
-            <br/>
-            <img src='/img/headshot.jpg' className='imgBottomLeft'/>
+            <b>Heyo!</b>
+            <img src='/img/bio.jpg' className='imgBottomLeft'/>
           </div>
 
           <div className='tagBottomRight' onClick={()=>this.toggleBottomRight()}>contact</div>
 
           <div className={this.bottomRight()} onClick={()=>this.toggleBottomRight()}>
-            <b>LinkedIn</b>
             <br/>
-            <a href='https://www.linkedin.com/in/ryanmchenry2/'>@ryanmchenry2</a>
-            <br/>
-            <b>GitHub</b>
-            <br/>
-            <a href='https://www.github.com/ryanmchenry2/'>@ryanmchenry2</a>
+            <a href='https://www.linkedin.com/in/ryanmchenry2/'><b>LinkedIn</b></a>
+            <br/><br/>
+            <a href='https://www.github.com/ryanmchenry2/'><b>GitHub</b></a>
+            <br/><br/>
+            <a href='https://www.facebook.com/ryanmchenry2/'><b>Facebook</b></a>
+            <br/><br/>
+            <a href='mailto:ryanmchenry2@gmail.com'><b>Email</b></a>
+            <br/><br/>
           </div>
         </div>
       );
@@ -179,9 +180,8 @@ class App extends Component {
         <div className='tagBottomLeft'>what i look like</div>
 
         <div className='contentBottomLeft'>
-          <div className='textBottomLeft'>Heyo!</div>
-          <br/>
-          <img src='/img/headshot.jpg' className='imgBottomLeft'/>
+          <b>Heyo!</b>
+          <img src='/img/bio.jpg' className='imgBottomLeft'/>
         </div>
 
         <div className='tagBottomRight'>contact</div>
