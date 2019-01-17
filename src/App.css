@@ -55,6 +55,23 @@ div{
   overflow: hidden;
 }
 
+.contentTopLeftMobile{
+  position: absolute;
+  top:20px;
+  left:20px;
+  font-size: 3em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  height: 20px;
+  width: 80px;
+  background-color: transparent;
+  color: transparent;
+  transition: all .5s;
+  overflow: hidden;
+}
+
 .contentTopLeft:hover{
   width: 30%;
   height:auto;
@@ -94,6 +111,23 @@ div{
   top:20px;
   right:20px;
   font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  height: 20px;
+  width: 80px;
+  background-color: transparent;
+  color: transparent;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.contentTopRightMobile{
+  position: absolute;
+  top:20px;
+  right:20px;
+  font-size: 3em;
   padding: 10px;
   font-weight: 200;
   text-align: center;
@@ -157,6 +191,23 @@ div{
   overflow: hidden;
 }
 
+.contentBottomLeftMobile{
+  position: absolute;
+  bottom:20px;
+  left:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  height: 20px;
+  width: 80px;
+  background-color: transparent;
+  color: transparent;
+  transition: all .5s;
+  overflow: hidden;
+}
+
 .contentBottomLeft:hover{
   width: 20%;
   padding: 0;
@@ -167,8 +218,16 @@ div{
 }
 
 .contentBottomLeftOpen{
-  width: 20%;
-  padding: 0;
+  position: absolute;
+  bottom:20px;
+  left:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  transition: all .5s;
+  overflow: hidden;
+  width: 60%;
   height:auto;
   background-color: white;
   color: black;
@@ -201,6 +260,23 @@ div{
   overflow: hidden;
 }
 
+.contentBottomRightMobile{
+  position: absolute;
+  bottom:20px;
+  right:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  height: 20px;
+  width: 80px;
+  background-color: transparent;
+  color: transparent;
+  transition: all .5s;
+  overflow: hidden;
+}
+
 .contentBottomRight:hover{
   width: 30%;
   height:auto;
@@ -210,7 +286,16 @@ div{
 }
 
 .contentBottomRightOpen{
-  width: 30%;
+  position: absolute;
+  bottom:20px;
+  right:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  transition: all .5s;
+  overflow: hidden;
+  width: 60%;
   height:auto;
   background-color: white;
   color: black;
