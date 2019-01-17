@@ -7,7 +7,43 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      topLeft:false,
+      topRight:false,
+      bottomLeft:false,
+      bottomRight:false
     }
+  }
+
+  open(corner){
+    this.setState({
+      [corner]:!this.state.corner
+    })
+  }
+
+  close(corner){
+    this.setState({
+      [corner]:false
+    })
+  }
+
+  topLeft(){
+    if(this.state.topLeft){return('contentTopLeftOpen')}
+    return('contentTopLeft')
+  }
+
+  topRight(){
+    if(this.state.topRight){return('contentTopRightOpen')}
+    return('contentTopRight')
+  }
+
+  bottomLeft(){
+    if(this.state.bottomLeft){return('contentBottomLeftOpen')}
+    return('contentBottomLeft')
+  }
+
+  bottomRight(){
+    if(this.state.bottomRight){return('contentBottomRightOpen')}
+    return('contentBottomRight')
   }
 
   render() {
@@ -18,9 +54,9 @@ class App extends Component {
       <div className='app'>
         <div className='headerName'>Ryan McHenry.</div>
 
-        <div className='tagTopLeft'>who i am</div>
+        <div className='tagTopLeft' onClick={()=>this.open('topLeft')}>who i am</div>
 
-        <div className='contentTopLeft'>
+        <div className={this.topLeft()} onClick={()=>this.close('topLeft')}>
           hi. my name is ryan.
           <br/>
           - software developer / product manager
@@ -34,9 +70,9 @@ class App extends Component {
           - double major in Computer Science and Music Engineering
         </div>
 
-        <div className='tagTopRight'>what i do</div>
+        <div className='tagTopRight' onClick={()=>this.open('topRight')}>what i do</div>
 
-        <div className='contentTopRight'>
+        <div className={this.topRight()} onClick={()=>this.close('topRight')}>
           <b>Blueprint Alpha</b>
           <br/>
           <div>Product Manager (January 2018 - present)</div>
@@ -46,17 +82,17 @@ class App extends Component {
           <div>Product Manager (September 2018 - January 2019)</div>
         </div>
 
-        <div className='tagBottomLeft'>what i look like</div>
+        <div className='tagBottomLeft' onClick={()=>this.open('bottomLeft')}>what i look like</div>
 
-        <div className='contentBottomLeft'>
+        <div className={this.bottomLeft()} onClick={()=>this.close('bottomLeft')}>
           <div className='textBottomLeft'>Heyo!</div>
           <br/>
           <img src='/img/headshot.jpg' className='imgBottomLeft'/>
         </div>
 
-        <div className='tagBottomRight'>contact</div>
+        <div className='tagBottomRight' onClick={()=>this.open('bottomRight')}>contact</div>
 
-        <div className='contentBottomRight'>
+        <div className={this.bottomRight()} onClick={()=>this.close('bottomRight')}>
           <b>LinkedIn</b>
           <br/>
           <a href='https://www.linkedin.com/in/ryanmchenry2/'>@ryanmchenry2</a>

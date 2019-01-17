@@ -63,8 +63,17 @@ div{
   border-radius: 10px;
 }
 
-.contentTopLeft:active{
-  width: 30%;
+.contentTopLeftOpen{
+  position: absolute;
+  top:20px;
+  left:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  transition: all .5s;
+  overflow: hidden;
+  width: 60%;
   height:auto;
   background-color: white;
   color: black;
@@ -105,8 +114,17 @@ div{
   border-radius: 10px;
 }
 
-.contentTopRight:active{
-  width: 30%;
+.contentTopRightOpen{
+  position: absolute;
+  top:20px;
+  right:20px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 200;
+  text-align: center;
+  transition: all .5s;
+  overflow: hidden;
+  width: 60%;
   height:auto;
   background-color: white;
   color: black;
@@ -148,7 +166,7 @@ div{
   border-radius: 10px;
 }
 
-.contentBottomLeft:active{
+.contentBottomLeftOpen{
   width: 20%;
   padding: 0;
   height:auto;
@@ -191,7 +209,7 @@ div{
   border-radius: 10px;
 }
 
-.contentBottomRight:active{
+.contentBottomRightOpen{
   width: 30%;
   height:auto;
   background-color: white;
