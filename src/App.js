@@ -170,6 +170,12 @@ class App extends Component {
         </div>
       );
     }
+
+
+
+
+    //DESKTOP
+    
     return (
       <div className='app'>
         <div className='headerName'>

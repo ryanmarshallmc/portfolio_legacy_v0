@@ -118,12 +118,14 @@ code {
   text-align: center;
   color: white;
   height: 20px;
-  width: 120px;
   background-color: transparent;
   color: transparent;
   transition: all .5s;
   overflow: hidden;
   max-height: 175px;
+  width: 30%;
+  border-radius: 10px;
+  transform: translateX(-20vw);
 }
 
 .contentTopLeftMobile{
@@ -144,11 +146,10 @@ code {
 }
 
 .contentTopLeft:hover{
-  width: 30%;
   height:auto;
   background-color: white;
   color: black;
-  border-radius: 10px;
+  transform: translateX(0vw);
 }
 
 .contentTopLeftOpen{
@@ -191,12 +192,14 @@ code {
   text-align: center;
   color: white;
   height: 20px;
-  width: 120px;
   background-color: transparent;
   color: transparent;
   transition: all .5s;
   overflow: hidden;
   max-height: 580px;
+  width: 25%;
+  border-radius: 10px;
+  transform: translateX(15vw);
 }
 
 .contentTopRightMobile{
@@ -217,11 +220,10 @@ code {
 }
 
 .contentTopRight:hover{
-  width: 30%;
   height:auto;
   background-color: white;
   color: black;
-  border-radius: 10px;
+  transform: translateX(0vw);
 }
 
 .contentTopRightOpen{
@@ -258,18 +260,19 @@ code {
   position: absolute;
   bottom:20px;
   left:20px;
-  font-size: 1em;
   padding: 10px;
+  font-size: 1em;
   font-weight: 200;
   text-align: center;
-  color: white;
   height: 20px;
-  width: 120px;
   background-color: transparent;
   color: transparent;
   transition: all .5s;
   overflow: hidden;
   max-height: 440px;
+  width: 20%;
+  border-radius: 10px;
+  transform: translateX(-10vw);
 }
 
 .contentBottomLeftMobile{
@@ -290,12 +293,11 @@ code {
 }
 
 .contentBottomLeft:hover{
-  width: 20%;
   padding: 0;
   height:auto;
   background-color: white;
   color: black;
-  border-radius: 10px;
+  transform: translateX(0vw);
 }
 
 .contentBottomLeftOpen{
@@ -335,14 +337,15 @@ code {
   padding: 10px;
   font-weight: 200;
   text-align: center;
-  color: white;
   height: 20px;
-  width: 120px;
   background-color: transparent;
   color: transparent;
   transition: all .5s;
   overflow: hidden;
   max-height: 248px;
+  width: 20%;
+  border-radius: 10px;
+  transform: translateX(10vw);
 }
 
 .contentBottomRightMobile{
@@ -364,11 +367,10 @@ code {
 }
 
 .contentBottomRight:hover{
-  width: 20%;
   height:auto;
   background-color: white;
   color: black;
-  border-radius: 10px;
+  transform: translateX(0vw);
 }
 
 .contentBottomRightOpen{
