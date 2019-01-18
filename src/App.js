@@ -149,12 +149,20 @@ class App extends Component {
 
           <div className={this.bottomRight()} onClick={()=>this.toggleBottomRight()}>
             <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
+            <br/><br/>
+            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ryanmchenry2/'>
+              <img alt='' src='/img/linkedin.png' className='contactImgMobile' />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href='https://www.github.com/ryanmchenry2/'>
+              <img alt='' src='/img/git.png' className='contactImgMobile' />
+            </a>
             <br/>
-            <img alt='' src='/img/linkedin.png' className='contactImgMobile' />
-            <img alt='' src='/img/git.png' className='contactImgMobile' />
-            <br/>
-            <img alt='' src='/img/facebook.png' className='contactImgMobile' />
-            <img alt='' src='/img/email.png' className='contactImgMobile' />
+            <a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/ryanmchenry2/'>
+              <img alt='' src='/img/facebook.png' className='contactImgMobile' />
+            </a>
+            <a href='mailto:ryanmchenry2@gmail.com'>
+              <img alt='' src='/img/email.png' className='contactImgMobile' />
+            </a>
           </div>
         </div>
       );
@@ -215,11 +223,19 @@ class App extends Component {
         <div className='contentBottomRight'>
           <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
           <br/><br/>
-          <img alt='' src='/img/linkedin.png' className='contactImg' />
-          <img alt='' src='/img/git.png' className='contactImg' />
+          <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ryanmchenry2/'>
+            <img alt='' src='/img/linkedin.png' className='contactImg' />
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href='https://www.github.com/ryanmchenry2/'>
+            <img alt='' src='/img/git.png' className='contactImg' />
+          </a>
           <br/>
-          <img alt='' src='/img/facebook.png' className='contactImg' />
-          <img alt='' src='/img/email.png' className='contactImg' />
+          <a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/ryanmchenry2/'>
+            <img alt='' src='/img/facebook.png' className='contactImg' />
+          </a>
+          <a href='mailto:ryanmchenry2@gmail.com'>
+            <img alt='' src='/img/email.png' className='contactImg' />
+          </a>
         </div>
       </div>
     );
