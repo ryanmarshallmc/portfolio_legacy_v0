@@ -98,11 +98,11 @@ class App extends Component {
           <div className={this.topLeft()} onClick={()=>this.toggleTopLeft()}>
             <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
             <br/><br/>
-            - northwestern university c/o 2019
+            - software dev / product manager
+            <br/><br/>
+            - northwestern university 2019
             <br/><br/>
             - double major in CS and music
-            <br/><br/>
-            - software dev / product manager
             <br/><br/>
             - from Philadelphia, PA
             <br/><br/>
@@ -131,6 +131,7 @@ class App extends Component {
             <b>TEDxChicago</b>
             <br/>
             <div>Speaker Coordinator<br/>(September 2017 - present)</div>
+            <br/>
           </div>
 
           <div className='tagBottomLeft' onClick={()=>this.toggleBottomLeft()}>here i am</div>
@@ -163,11 +164,11 @@ class App extends Component {
         <div className='contentTopLeft'>
           <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
           <br/>
-          - northwestern university c/o 2019
+          - software dev / product manager
+          <br/>
+          - northwestern university 2019
           <br/>
           - double major in CS and music
-          <br/>
-          - software dev / product manager
           <br/>
           - from Philadelphia, PA
           <br/>
