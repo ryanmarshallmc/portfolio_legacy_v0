@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import './App.css'
 
 class App extends Component {
@@ -85,6 +86,9 @@ class App extends Component {
   }
 
   render() {
+
+    ReactGA.initialize('UA-132778259-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     const {width} = this.state;
     const isMobile = width <= 1000;
