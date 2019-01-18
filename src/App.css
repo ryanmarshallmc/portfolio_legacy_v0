@@ -361,4 +361,5 @@ code {
 }
 .contactImg:hover{
   height:70px;
+  opacity: .3;
 }
