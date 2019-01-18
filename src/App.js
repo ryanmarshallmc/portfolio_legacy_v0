@@ -100,7 +100,7 @@ class App extends Component {
             <br/><br/>
             - software dev / product manager
             <br/><br/>
-            - northwestern university 2019
+            - northwestern university c/o 2019
             <br/><br/>
             - double major in CS and music
             <br/><br/>
@@ -166,7 +166,7 @@ class App extends Component {
           <br/>
           - software dev / product manager
           <br/>
-          - northwestern university 2019
+          - northwestern university c/o 2019
           <br/>
           - double major in CS and music
           <br/>
