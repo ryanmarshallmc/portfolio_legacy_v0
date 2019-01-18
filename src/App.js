@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import './App.css'
 
 class App extends Component {
@@ -88,7 +87,7 @@ class App extends Component {
   render() {
 
     const {width} = this.state;
-    const isMobile = width <= 1000;
+    const isMobile = width <= 600;
     if (isMobile){
       return (
         <div className='app'>
@@ -97,50 +96,59 @@ class App extends Component {
           <div className='tagTopLeft' onClick={()=>this.toggleTopLeft()}>who i am</div>
 
           <div className={this.topLeft()} onClick={()=>this.toggleTopLeft()}>
-            hi. my name is ryan.
+            <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
             <br/>
-            - software developer / product manager
+            - software dev / product manager
             <br/>
-            - living in Chicago, IL.
+            - living in Chicago, IL
             <br/>
-            - from Philadelphia, PA.
+            - from Philadelphia, PA
             <br/>
-            - Northwestern University Class of 2019
+            - northwestern university c/o 2019
             <br/>
-            - double major in Computer Science and Music Engineering
+            - double major in CS and music
           </div>
 
           <div className='tagTopRight' onClick={()=>this.toggleTopRight()}>what i do</div>
 
           <div className={this.topRight()} onClick={()=>this.toggleTopRight()}>
+            <br/>
+            <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImg'/></a>
+            <br/>
             <b>Blueprint Alpha</b>
             <br/>
-            <div>Product Manager (January 2018 - present)</div>
+            <div>Product Manager<br/>(January 2018 - present)</div>
+            <br/>
+            <a target="_blank" rel="noopener noreferrer" href='https://impactgenome.org'><img alt='' src='/img/mm.png' className='workImg'/></a>
             <br/>
             <b>Mission Measurement</b>
             <br/>
-            <div>Product Manager (September 2018 - January 2019)</div>
+            <div>Product Manager<br/>(September 2018 - January 2019)</div>
+            <br/>
+            <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImg'/></a>
+            <br/>
+            <b>TEDxChicago</b>
+            <br/>
+            <div>Speaker Coordinator<br/>(September 2017 - present)</div>
           </div>
 
-          <div className='tagBottomLeft' onClick={()=>this.toggleBottomLeft()}>what i look like</div>
+          <div className='tagBottomLeft' onClick={()=>this.toggleBottomLeft()}>here i am</div>
 
           <div className={this.bottomLeft()} onClick={()=>this.toggleBottomLeft()}>
-            <b>Heyo!</b>
-            <img src='/img/bio.jpg' className='imgBottomLeft'/>
+            <b style={{fontSize:'1.2em'}}>heyo!</b>
+            <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>
           </div>
 
           <div className='tagBottomRight' onClick={()=>this.toggleBottomRight()}>contact</div>
 
           <div className={this.bottomRight()} onClick={()=>this.toggleBottomRight()}>
+            <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
             <br/>
-            <a href='https://www.linkedin.com/in/ryanmchenry2/'><b>LinkedIn</b></a>
-            <br/><br/>
-            <a href='https://www.github.com/ryanmchenry2/'><b>GitHub</b></a>
-            <br/><br/>
-            <a href='https://www.facebook.com/ryanmchenry2/'><b>Facebook</b></a>
-            <br/><br/>
-            <a href='mailto:ryanmchenry2@gmail.com'><b>Email</b></a>
-            <br/><br/>
+            <img alt='' src='/img/linkedin.png' className='contactImg' />
+            <img alt='' src='/img/git.png' className='contactImg' />
+            <br/>
+            <img alt='' src='/img/facebook.png' className='contactImg' />
+            <img alt='' src='/img/email.png' className='contactImg' />
           </div>
         </div>
       );
@@ -152,48 +160,60 @@ class App extends Component {
         <div className='tagTopLeft'>who i am</div>
 
         <div className='contentTopLeft'>
-          hi. my name is ryan.
+          <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
           <br/>
-          - software developer / product manager
+          - software dev / product manager
           <br/>
-          - living in Chicago, IL.
+          - living in Chicago, IL
           <br/>
-          - from Philadelphia, PA.
+          - from Philadelphia, PA
           <br/>
-          - Northwestern University Class of 2019
+          - northwestern university c/o 2019
           <br/>
-          - double major in Computer Science and Music Engineering
+          - double major in CS and music
         </div>
 
         <div className='tagTopRight'>what i do</div>
 
         <div className='contentTopRight'>
+          <b style={{fontSize:'1.2em'}}>I'm passionate about<br/>software with a purpose.</b>
+          <br/><br/>
+          <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImg'/></a>
+          <br/>
           <b>Blueprint Alpha</b>
           <br/>
-          <div>Product Manager (January 2018 - present)</div>
+          <div>Product Manager<br/>(January 2018 - present)</div>
+          <br/>
+          <a target="_blank" rel="noopener noreferrer" href='https://impactgenome.org'><img alt='' src='/img/mm.png' className='workImg'/></a>
           <br/>
           <b>Mission Measurement</b>
           <br/>
-          <div>Product Manager (September 2018 - January 2019)</div>
+          <div>Product Manager<br/>(September 2018 - January 2019)</div>
+          <br/>
+          <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImg'/></a>
+          <br/>
+          <b>TEDxChicago</b>
+          <br/>
+          <div>Speaker Coordinator<br/>(September 2017 - present)</div>
         </div>
 
-        <div className='tagBottomLeft'>what i look like</div>
+        <div className='tagBottomLeft'>here i am</div>
 
         <div className='contentBottomLeft'>
-          <b>Heyo!</b>
-          <img src='/img/bio.jpg' className='imgBottomLeft'/>
+          <b style={{fontSize:'1.2em'}}>heyo!</b>
+          <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>
         </div>
 
         <div className='tagBottomRight'>contact</div>
 
         <div className='contentBottomRight'>
-          <b>LinkedIn</b>
+          <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
+          <br/><br/>
+          <img alt='' src='/img/linkedin.png' className='contactImg' />
+          <img alt='' src='/img/git.png' className='contactImg' />
           <br/>
-          <a href='https://www.linkedin.com/in/ryanmchenry2/'>@ryanmchenry2</a>
-          <br/>
-          <b>GitHub</b>
-          <br/>
-          <a href='https://www.github.com/ryanmchenry2/'>@ryanmchenry2</a>
+          <img alt='' src='/img/facebook.png' className='contactImg' />
+          <img alt='' src='/img/email.png' className='contactImg' />
         </div>
       </div>
     );
