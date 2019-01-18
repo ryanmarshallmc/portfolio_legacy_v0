@@ -87,7 +87,7 @@ class App extends Component {
   render() {
 
     const {width} = this.state;
-    const isMobile = width <= 600;
+    const isMobile = width <= 1000;
     if (isMobile){
       return (
         <div className='app'>
@@ -97,35 +97,36 @@ class App extends Component {
 
           <div className={this.topLeft()} onClick={()=>this.toggleTopLeft()}>
             <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
-            <br/>
-            - software dev / product manager
-            <br/>
-            - living in Chicago, IL
-            <br/>
-            - from Philadelphia, PA
-            <br/>
+            <br/><br/>
             - northwestern university c/o 2019
-            <br/>
+            <br/><br/>
             - double major in CS and music
+            <br/><br/>
+            - software dev / product manager
+            <br/><br/>
+            - from Philadelphia, PA
+            <br/><br/>
+            - living in Chicago, IL
+            <br/><br/>
           </div>
 
           <div className='tagTopRight' onClick={()=>this.toggleTopRight()}>what i do</div>
 
           <div className={this.topRight()} onClick={()=>this.toggleTopRight()}>
             <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImg'/></a>
+            <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImgMobile'/></a>
             <br/>
             <b>Blueprint Alpha</b>
             <br/>
             <div>Product Manager<br/>(January 2018 - present)</div>
             <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://impactgenome.org'><img alt='' src='/img/mm.png' className='workImg'/></a>
+            <a target="_blank" rel="noopener noreferrer" href='https://impactgenome.org'><img alt='' src='/img/mm.png' className='workImgMobile'/></a>
             <br/>
             <b>Mission Measurement</b>
             <br/>
             <div>Product Manager<br/>(September 2018 - January 2019)</div>
             <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImg'/></a>
+            <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImgMobile'/></a>
             <br/>
             <b>TEDxChicago</b>
             <br/>
@@ -144,11 +145,11 @@ class App extends Component {
           <div className={this.bottomRight()} onClick={()=>this.toggleBottomRight()}>
             <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
             <br/>
-            <img alt='' src='/img/linkedin.png' className='contactImg' />
-            <img alt='' src='/img/git.png' className='contactImg' />
+            <img alt='' src='/img/linkedin.png' className='contactImgMobile' />
+            <img alt='' src='/img/git.png' className='contactImgMobile' />
             <br/>
-            <img alt='' src='/img/facebook.png' className='contactImg' />
-            <img alt='' src='/img/email.png' className='contactImg' />
+            <img alt='' src='/img/facebook.png' className='contactImgMobile' />
+            <img alt='' src='/img/email.png' className='contactImgMobile' />
           </div>
         </div>
       );
@@ -162,15 +163,15 @@ class App extends Component {
         <div className='contentTopLeft'>
           <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
           <br/>
-          - software dev / product manager
-          <br/>
-          - living in Chicago, IL
-          <br/>
-          - from Philadelphia, PA
-          <br/>
           - northwestern university c/o 2019
           <br/>
           - double major in CS and music
+          <br/>
+          - software dev / product manager
+          <br/>
+          - from Philadelphia, PA
+          <br/>
+          - living in Chicago, IL
         </div>
 
         <div className='tagTopRight'>what i do</div>
