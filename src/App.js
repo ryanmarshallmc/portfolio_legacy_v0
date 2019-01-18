@@ -96,7 +96,7 @@ class App extends Component {
       return (
         <div className='app'>
           <div className='headerName'>
-            <img src='/img/outline.png' className='mainImgMobile'/><br/>
+            <img src='/img/outline.png' className='mainImgMobile' title='©Zoe Juanitas, 2019'/><br/>
             Ryan McHenry.
           </div>
 
@@ -173,7 +173,7 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='headerName'>
-          <img src='/img/outline.png' className='mainImg'/>
+          <img src='/img/outline.png' className='mainImg'  title='©Zoe Juanitas, 2019'/>
           <br/>
           Ryan McHenry.
         </div>
@@ -219,7 +219,7 @@ class App extends Component {
         </div>
 
         <div className='tagBottomLeft'>here i am</div>
-        
+
         <div className='contentBottomLeft'>
           <b style={{fontSize:'1.2em'}}>heyo!</b>
           <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>
