@@ -65,8 +65,18 @@ code {
   }
 }
 
+.mainImg{
+  height:300px;
+}
+
+.mainImgMobile{
+  height:300px;
+  margin-bottom: -30px;
+}
+
 .headerName{
   font-size: 10vh;
+  line-height: 1;
   color: white;
   font-weight: 800;
   margin: 0;

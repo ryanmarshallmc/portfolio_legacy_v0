@@ -95,7 +95,10 @@ class App extends Component {
     if (isMobile){
       return (
         <div className='app'>
-          <div className='headerName'>Ryan McHenry.</div>
+          <div className='headerName'>
+            <img src='/img/outline.png' className='mainImgMobile'/><br/>
+            Ryan McHenry.
+          </div>
 
           <div className='tagTopLeft' onClick={()=>this.toggleTopLeft()}>who i am</div>
 
@@ -169,7 +172,11 @@ class App extends Component {
     }
     return (
       <div className='app'>
-        <div className='headerName'>Ryan McHenry.</div>
+        <div className='headerName'>
+          <img src='/img/outline.png' className='mainImg'/>
+          <br/>
+          Ryan McHenry.
+        </div>
 
         <div className='tagTopLeft'>who i am</div>
 
