@@ -219,7 +219,7 @@ class App extends Component {
         </div>
 
         <div className='tagBottomLeft'>here i am</div>
-
+        
         <div className='contentBottomLeft'>
           <b style={{fontSize:'1.2em'}}>heyo!</b>
           <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>

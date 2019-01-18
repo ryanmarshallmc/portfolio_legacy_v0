@@ -261,7 +261,7 @@ code {
   color: transparent;
   transition: all .5s;
   overflow: hidden;
-  max-height: 320px;
+  max-height: 440px;
 }
 
 .contentBottomLeftMobile{
