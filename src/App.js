@@ -96,7 +96,7 @@ class App extends Component {
       return (
         <div className='app'>
           <div className='headerName'>
-            <img src='/img/outline.png' className='mainImgMobile' title='©Zoe Juanitas, 2019'/><br/>
+            <img src='/img/outline.png' className='mainImgMobile' title='©Zoe Juanitas, 2019' alt=''/><br/>
             Ryan McHenry.
           </div>
 
@@ -175,11 +175,11 @@ class App extends Component {
 
 
     //DESKTOP
-    
+
     return (
       <div className='app'>
         <div className='headerName'>
-          <img src='/img/outline.png' className='mainImg'  title='©Zoe Juanitas, 2019'/>
+          <img src='/img/outline.png' className='mainImg'  title='©Zoe Juanitas, 2019' alt=''/>
           <br/>
           Ryan McHenry.
         </div>
