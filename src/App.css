@@ -75,7 +75,7 @@ code {
 }
 
 .mainImgMobile{
-  height:500px;
+  height:300px;
   margin-bottom: -30px;
   animation: fade-in-down ease 2.5s forwards;
   animation-delay: 1s;

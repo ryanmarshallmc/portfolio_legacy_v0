@@ -3,7 +3,7 @@ echo "Building rmc-site..."
 yarn build
 echo "Build complete. Optimized version ready to release."
 
-aws s3 cp --recursive build s3://rmc-site --profile ryanmchenry2
+aws s3 cp --recursive build s3://ryan-mchenry.com --profile ryanmchenry2
 echo "sync completed - s3 is up to date."
 
 read -p "Do you want to commit to GitHub?" yn
