@@ -97,7 +97,7 @@ class App extends Component {
         <div className='app'>
           <div className='headerName'>
             <img src='/img/outline.png' className='mainImgMobile' title='©Zoe Juanitas, 2019' alt=''/><br/>
-            Ryan McHenry.
+            Ryan<br/>McHenry.
           </div>
 
           <div className='tagTopLeft' onClick={()=>this.toggleTopLeft()}>who i am</div>
