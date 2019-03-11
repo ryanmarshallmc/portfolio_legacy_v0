@@ -115,9 +115,9 @@ code {
   top:20px;
   left:20px;
   font-size: 1em;
-  padding: 10px;
   font-weight: 200;
-  text-align: center;
+  text-align: left;
+  padding: 10px 30px;
   color: white;
   height: 20px;
   background-color: transparent;
@@ -125,16 +125,21 @@ code {
   transition: all .5s;
   overflow: hidden;
   max-height: 175px;
-  width: 30%;
+  /* width: 30%; */
   border-radius: 10px;
   transform: translateX(-20vw);
+}
+
+.contentTopLeftHeader{
+  font-size: 1.2em;
+  text-align: center !important;
 }
 
 .contentTopLeftMobile{
   position: absolute;
   top:20px;
   left:20px;
-  font-size: 3em;
+  font-size: 1em;
   padding: 10px;
   font-weight: 200;
   text-align: center;
@@ -158,10 +163,10 @@ code {
   position: absolute;
   top:20px;
   left:20px;
-  font-size: 28px;
+  font-size: 20px;
   padding: 10px;
   font-weight: 200;
-  text-align: center;
+  text-align: left;
   transition: all .5s;
   overflow: hidden;
   width: 60%;
@@ -232,7 +237,7 @@ code {
   position: absolute;
   top:20px;
   right:20px;
-  font-size: 28px;
+  font-size: 16px;
   padding: 10px;
   font-weight: 200;
   text-align: center;
@@ -306,7 +311,7 @@ code {
   position: absolute;
   bottom:20px;
   left:20px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 200;
   text-align: center;
   transition: all .5s;
@@ -379,7 +384,7 @@ code {
   position: absolute;
   bottom:20px;
   right:20px;
-  font-size: 28px;
+  font-size: 20px;
   padding: 10px;
   font-weight: 200;
   text-align: center;

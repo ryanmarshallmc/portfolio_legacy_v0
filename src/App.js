@@ -65,6 +65,15 @@ class App extends Component {
     })
   }
 
+  closeAll(){
+    this.setState({
+      topLeft:false,
+      topRight:false,
+      bottomLeft:false,
+      bottomRight:false
+    })
+  }
+
   topLeft(){
     if(this.state.topLeft){return('contentTopLeftOpen')}
     return('contentTopLeftMobile')
@@ -103,7 +112,7 @@ class App extends Component {
           <div className='tagTopLeft' onClick={()=>this.toggleTopLeft()}>who i am</div>
 
           <div className={this.topLeft()} onClick={()=>this.toggleTopLeft()}>
-            <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
+            <b style={{fontSize:'1.2em'}}>hi.<br/>my name is ryan.</b>
             <br/><br/>
             - software dev / product manager
             <br/><br/>
@@ -187,7 +196,7 @@ class App extends Component {
         <div className='tagTopLeft'>who i am</div>
 
         <div className='contentTopLeft'>
-          <b style={{fontSize:'1.2em'}}>hi. my name is ryan.</b>
+          <b className='contentTopLeftHeader'>hi. my name is ryan.</b>
           <br/>
           - software dev / product manager
           <br/>
