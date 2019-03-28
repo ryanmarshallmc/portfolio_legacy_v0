@@ -136,12 +136,6 @@ class App extends Component {
             <br/>
             <div>Product Manager<br/>(January 2018 - present)</div>
             <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://impactgenome.org'><img alt='' src='/img/mm.png' className='workImgMobile'/></a>
-            <br/>
-            <b>Mission Measurement</b>
-            <br/>
-            <div>Product Manager<br/>(September 2018 - January 2019)</div>
-            <br/>
             <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImgMobile'/></a>
             <br/>
             <b>TEDxChicago</b>
