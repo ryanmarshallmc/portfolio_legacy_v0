@@ -1,254 +1,231 @@
-import React, { Component } from 'react'
-import ReactGA from 'react-ga'
-import './App.css'
+import React from 'react';
+import './App.css';
+import LineTo from 'react-lineto';
 
-class App extends Component {
+class App extends React.Component {
 
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
-      topLeft:false,
-      topRight:false,
-      bottomLeft:false,
-      bottomRight:false,
-      width: window.innerWidth,
+      isMobile: window.innerWidth < 800 ? true : false,
+      mouseX:0,
+      mouseY:0,
+      view: 'splash',
+      photo: null
     }
   }
 
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange);
+  followMouse(e){
+    this.setState({ mouseX: e.screenX, mouseY: e.screenY-112 });
   }
 
-  // make sure to remove the listener
-  // when the component is not mounted anymore
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange);
-  }
-
-  handleWindowSizeChange = () => {
-    this.setState({ width: window.innerWidth });
-  };
-
-  toggleTopLeft(){
-    this.setState({
-      topLeft:!this.state.topLeft,
-      topRight:false,
-      bottomLeft:false,
-      bottomRight:false
-    })
-  }
-
-  toggleTopRight(){
-    this.setState({
-      topLeft:false,
-      topRight:!this.state.topRight,
-      bottomLeft:false,
-      bottomRight:false
-    })
-  }
-
-  toggleBottomLeft(){
-    this.setState({
-      topLeft:false,
-      topRight:false,
-      bottomLeft:!this.state.bottomLeft,
-      bottomRight:false
-    })
-  }
-
-  toggleBottomRight(){
-    this.setState({
-      topLeft:false,
-      topRight:false,
-      bottomLeft:false,
-      bottomRight:!this.state.bottomRight
-    })
-  }
-
-  closeAll(){
-    this.setState({
-      topLeft:false,
-      topRight:false,
-      bottomLeft:false,
-      bottomRight:false
-    })
-  }
-
-  topLeft(){
-    if(this.state.topLeft){return('contentTopLeftOpen')}
-    return('contentTopLeftMobile')
-  }
-
-  topRight(){
-    if(this.state.topRight){return('contentTopRightOpen')}
-    return('contentTopRightMobile')
-  }
-
-  bottomLeft(){
-    if(this.state.bottomLeft){return('contentBottomLeftOpen')}
-    return('contentBottomLeftMobile')
-  }
-
-  bottomRight(){
-    if(this.state.bottomRight){return('contentBottomRightOpen')}
-    return('contentBottomRightMobile')
-  }
-
-  render() {
-
-    ReactGA.initialize('UA-132778259-1');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
-    const {width} = this.state;
-    const isMobile = width <= 1000;
-    if (isMobile){
-      return (
-        <div className='app'>
-          <div className='headerName'>
-            <img src='/img/outline.png' className='mainImgMobile' title='©Zoe Juanitas, 2019' alt=''/><br/>
-            Ryan<br/>McHenry.
-          </div>
-
-          <div className='tagTopLeft' onClick={()=>this.toggleTopLeft()}>who i am</div>
-
-          <div className={this.topLeft()} onClick={()=>this.toggleTopLeft()}>
-            <b style={{fontSize:'1.2em'}}>hi.<br/>my name is ryan.</b>
-            <br/><br/>
-            - software dev / product manager
-            <br/><br/>
-            - northwestern university c/o 2019
-            <br/><br/>
-            - double major in CS and music
-            <br/><br/>
-            - from Philadelphia, PA
-            <br/><br/>
-            - living in Chicago, IL
-            <br/><br/>
-          </div>
-
-          <div className='tagTopRight' onClick={()=>this.toggleTopRight()}>what i do</div>
-
-          <div className={this.topRight()} onClick={()=>this.toggleTopRight()}>
-            <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImgMobile'/></a>
-            <br/>
-            <b>Blueprint Alpha</b>
-            <br/>
-            <div>Product Manager<br/>(January 2018 - present)</div>
-            <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImgMobile'/></a>
-            <br/>
-            <b>TEDxChicago</b>
-            <br/>
-            <div>Speaker Coordinator<br/>(September 2017 - present)</div>
-            <br/>
-          </div>
-
-          <div className='tagBottomLeft' onClick={()=>this.toggleBottomLeft()}>here i am</div>
-
-          <div className={this.bottomLeft()} onClick={()=>this.toggleBottomLeft()}>
-            <b style={{fontSize:'1.2em'}}>heyo!</b>
-            <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>
-          </div>
-
-          <div className='tagBottomRight' onClick={()=>this.toggleBottomRight()}>contact</div>
-
-          <div className={this.bottomRight()} onClick={()=>this.toggleBottomRight()}>
-            <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
-            <br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ryanmchenry2/'>
-              <img alt='' src='/img/linkedin.png' className='contactImgMobile' />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.github.com/ryanmchenry2/'>
-              <img alt='' src='/img/git.png' className='contactImgMobile' />
-            </a>
-            <br/>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/ryanmchenry2/'>
-              <img alt='' src='/img/facebook.png' className='contactImgMobile' />
-            </a>
-            <a href='mailto:ryanmchenry2@gmail.com'>
-              <img alt='' src='/img/email.png' className='contactImgMobile' />
-            </a>
-          </div>
-        </div>
-      );
+  renderCursorLine(){
+    if (!this.state.isMobile){
+      return(
+        <span>
+          <LineTo from="splashImg" to='splashMouse' borderColor='#e1e1e1' borderStyle='dashed' borderWidth={2} zIndex={-1}/>
+        </span>
+      )
     }
+  }
 
+  changeImgClear(){
+    console.log('mouse enter')
+      this.setState({img:'/me_clear.png'})
+  }
 
+  changeImgStandard(){
+    console.log('mouse leave')
+    this.setState({img:'/me.png'})
+  }
 
+  setView(view){
+    let left=['background','media']
+    let right=['projects','contact']
+    if (left.includes(this.state.view) && !left.includes(view)){
+      this.setState({view:'leftToRight'})
+      window.setTimeout(() => {
+        this.setState({view:view})
+      }, 500);
+    }
+    else if (right.includes(this.state.view) && !right.includes(view)){
+      this.setState({view:'rightToLeft'})
+      window.setTimeout(() => {
+        this.setState({view:view})
+      }, 500);
+    }
+    else {
+      this.setState({view:view})
+    }
+  }
 
-    //DESKTOP
+  renderWeb(){
+    return(
+      <span>
+        <div className='webText topLeft' style={this.state.view === 'background' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('background')}>background</div>
+        <div className='webText topRight' style={this.state.view === 'projects' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('projects')}>projects</div>
+        <div className='webText bottomLeft' style={this.state.view === 'media' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('media')}>media</div>
+        <div className='webText bottomRight' style={this.state.view === 'contact' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('contact')}>contact</div>
+        {this.renderCursorLine()}
+      </span>
+    )
+  }
 
-    return (
-      <div className='app'>
-        <div className='headerName'>
-          <img src='/img/outline.png' className='mainImg'  title='©Zoe Juanitas, 2019' alt=''/>
-          <br/>
-          Ryan McHenry.
-        </div>
-
-        <div className='tagTopLeft'>who i am</div>
-
-        <div className='contentTopLeft'>
-          <b className='contentTopLeftHeader'>hi. my name is ryan.</b>
-          <br/>
-          - software dev / product manager
-          <br/>
-          - northwestern university c/o 2019
-          <br/>
-          - double major in CS and music
-          <br/>
-          - from Philadelphia, PA
-          <br/>
-          - living in Chicago, IL
-        </div>
-
-        <div className='tagTopRight'>what i do</div>
-
-        <div className='contentTopRight'>
-          <b style={{fontSize:'1.2em'}}>I'm passionate about<br/>software with a purpose.</b>
-          <br/><br/>
-          <a target="_blank" rel="noopener noreferrer" href='https://blpt.co'><img alt='' src='/img/blpt.png' className='workImg'/></a>
-          <br/>
-          <b>Blueprint Alpha</b>
-          <br/>
-          <div>Product Manager<br/>(January 2018 - present)</div>
-          <br/>
-          <a target="_blank" rel="noopener noreferrer" href='https://tedxchicago.com'><img alt='' src='/img/ted.jpg' className='workImg'/></a>
-          <br/>
-          <b>TEDxChicago</b>
-          <br/>
-          <div>Speaker Coordinator<br/>(September 2017 - present)</div>
-        </div>
-
-        <div className='tagBottomLeft'>here i am</div>
-
-        <div className='contentBottomLeft'>
-          <b style={{fontSize:'1.2em'}}>heyo!</b>
-          <img alt='' src='/img/bio.jpg' className='imgBottomLeft'/>
-        </div>
-
-        <div className='tagBottomRight'>contact</div>
-
-        <div className='contentBottomRight'>
-          <b style={{fontSize:'1.2em'}}>I like talkin to folks!</b>
-          <br/><br/>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ryanmchenry2/'>
-            <img alt='' src='/img/linkedin.png' className='contactImg' />
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.github.com/ryanmchenry2/'>
-            <img alt='' src='/img/git.png' className='contactImg' />
-          </a>
-          <br/>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/ryanmchenry2/'>
-            <img alt='' src='/img/facebook.png' className='contactImg' />
-          </a>
-          <a href='mailto:ryanmchenry2@gmail.com'>
-            <img alt='' src='/img/email.png' className='contactImg' />
-          </a>
-        </div>
+  renderBackground(){
+    return(
+      <div className='leftBody'>
+        <b>Hi. I'm Ryan.</b>
+        <br style={{lineHeight:'2.4'}}/>
+        I'm a product manager for <a href='http://blpt.co' target='_blank' rel="noopener noreferrer">Blueprint</a> in Chicago.
+        <br style={{lineHeight:'2.4'}}/>
+        I graduated from Northwestern in 2019 with a double major in Computer Science and Music Engineering, 
+        and continue to teach software workshops at Northwestern's startup incubator,&nbsp;
+        <a href='https://thegarage.northwestern.edu/' target='_blank' rel="noopener noreferrer">The Garage</a>.
+        <br style={{lineHeight:'2.4'}}/>
+        As a researcher, I've worked with Northwestern's&nbsp;
+        <a href='https://tidal.northwestern.edu/' target='_blank' rel="noopener noreferrer">TIDAL Lab</a>&nbsp;
+        and <a href='http://music.cs.northwestern.edu/' target='_blank' rel="noopener noreferrer">Interactive Audio Lab</a>.
+        <br style={{lineHeight:'2.4'}}/>
+        I love all things UI/UX, Ed-Tech, and cooperative. As someone who came to CS&nbsp;
+        late in the game, I want to help demystify what it means to be a "coder".
+        <br style={{lineHeight:'2.4'}}/>
+        More on me <a href='/resume.pdf' target='_blank' rel="noopener noreferrer">here</a>.
       </div>
-    );
+    )
+  }
+
+  renderProjects(){
+    return(
+      <div className='rightBody'>
+        <b><a href='http://blpt.co' target='_blank' rel="noopener noreferrer">Blueprint Alpha</a></b>
+        <br/>
+        Lots of projects, from scraping, to computer vision, to predictive investing,
+        to <a href='https://www.ballotready.org/' target='_blank' rel="noopener noreferrer">BallotReady</a>, and some super-secret-in-the-works type stuff;)
+        <br style={{lineHeight:'2.4'}}/>
+        <b><a href='http://accompani.io' target='_blank' rel="noopener noreferrer">Accompani</a></b>
+        <br/>
+        A machine-learning powered harmonizer and lead-sheet generator. Trained on over 3,000 lead sheets and customizable by genre, chord frequency, and key signature.
+        <br style={{lineHeight:'2.4'}}/>
+        <b><a href='http://predictivepolitics.xyz' target='_blank' rel="noopener noreferrer">Predictive Politics</a></b>
+        <br/>
+        An election prediction application built on twitter scraping, with modular, scalable source data and real time model construction.
+        <br style={{lineHeight:'2.4'}}/>
+      </div>
+    )
+  }
+
+  renderMedia(){
+    if (!this.state.photo){
+      return(
+        <div className='leftBody'>
+          <img className='mediaImg' src='/media_1.jpg' onClick={()=>this.setState({photo:'/media_1.jpg'})}/>
+          <img className='mediaImg' src='/media_2.jpg' onClick={()=>this.setState({photo:'/media_2.jpg'})}/>
+          <img className='mediaImg' src='/media_3.jpg' onClick={()=>this.setState({photo:'/media_3.jpg'})}/>
+          <img className='mediaImg' src='/media_4.jpg' onClick={()=>this.setState({photo:'/media_4.jpg'})}/>
+        </div>
+      )
+    }
+    else{
+      return(
+        <div className='leftBody'>
+          <img className='mediaImgFull' src={this.state.photo}/>
+          <div style={{textDecoration:'underline',color:'blue'}} onClick={()=>this.setState({photo: null})}>&lt; back</div>
+        </div>
+      )
+    }
+    
+  }
+
+  renderContact(){
+    return(
+      <div className='rightBody'>
+        <b>Places you can find me on the in-ter-webs:</b>
+        <br style={{lineHeight:'2.4'}}/>
+        <a href='https://github.com/ryanmchenry2' target='_blank' rel="noopener noreferrer">GitHub</a>: @ryanmchenry2
+        <br style={{lineHeight:'2.4'}}/>
+        <a href='https://linkedin.com/in/ryanmchenry2' target='_blank' rel="noopener noreferrer">LinkedIn</a>: @ryanmchenry2
+        <br style={{lineHeight:'2.4'}}/>
+        <a href='https://facebook.com/ryanmchenry2' target='_blank' rel="noopener noreferrer">Facebook</a>: @ryanmchenry2
+        <br style={{lineHeight:'2.4'}}/>
+        <a href='mailto:ryanmchenry2@gmail.com'>Gmail</a>: @ryanmchenry2
+        <br style={{lineHeight:'2.4'}}/>
+        I always love to hear about projects, opportunities, and crazy-wild-aspiration-dreams that will likely never come to fruition but are still fun to talk about.
+        <br style={{lineHeight:'2.4'}}/>
+        Reach out - let's talk. Safe to say, it's probably <b>@ryanmchenry2</b> on whatever website you can think up.
+      </div>
+    )
+  }
+
+  render(){
+    if (this.state.view === 'splash'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+            <img  src='/me.png' className='splashImg splashImgColor' alt='me' onClick={()=>this.setView('splash')}/>
+            <div className='splashBanner'> Ryan McHenry.</div>
+            <div className='splashSubBanner'>software, product, etc.</div>
+            <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+            {this.renderWeb()}
+          </div>
+      )
+    }
+    if (this.state.view === 'background'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg moveRight' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+          {this.renderBackground()}
+        </div>
+      )
+    }
+    if (this.state.view === 'media'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg moveRight' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+          {this.renderMedia()}
+        </div>
+      )
+    }
+    if (this.state.view === 'projects'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg moveLeft' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+          {this.renderProjects()}
+        </div>
+      )
+    }
+    if (this.state.view === 'contact'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg moveLeft' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+          {this.renderContact()}
+        </div>
+      )
+    }
+    if (this.state.view === 'leftToRight'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg leftToRight' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+        </div>
+      )
+    }
+    if (this.state.view === 'rightToLeft'){
+      return(
+        <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
+          <img  src='/me.png' className='splashImg rightToLeft' alt='me' onClick={()=>this.setView('splash')}/>
+          <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
+          {this.renderWeb()}
+        </div>
+      )
+    }
   }
 }
 

@@ -1,18 +1,7 @@
-/* IMPORTS */
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-
-
-/* GLOBALS */
-
-div{
-  font-family: "Poppins";
-  font-weight: 100;
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap');
 
 body {
   margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -25,422 +14,370 @@ code {
     monospace;
 }
 
-
-.app{
-   background-image: linear-gradient(135deg, #4100f5 0%, #b49bc8 100%);
-   width:100vw;
-   height:100vh;
-   overflow: hidden;
-   position: relative;
+a{
+  cursor: none;
 }
 
-@keyframes fade-in-down {
+.mediaImg{
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  min-width: 100px;
+}
+
+.mediaImgFull{
+  display: inline-block;
+  width: 100%;
+  animation: fade-in-from-left 1s forwards ease;
+}
+
+.moveRight{
+  background: #744123;
+  animation: move-right 1s forwards ease;
+}
+
+.moveLeft{
+  background: #744123;
+  animation: move-left 1s forwards ease;
+}
+
+.leftToRight{
+  background: #744123;
+  animation: move-left-to-right .5s forwards linear;
+}
+
+.rightToLeft{
+  background: #744123;
+  animation: move-right-to-left .5s forwards linear;
+}
+
+@keyframes move-right {
   from {
-    opacity: 0;
-    transform: translateY(-15px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0px);
+    left: 80%;
+    opacity: 0.5;
   }
 }
 
-@keyframes fade-in-up {
+@keyframes move-left {
   from {
-    opacity: 0;
-    transform: translateY(15px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0px);
+    left: 20%;
+    opacity: 0.5;
   }
 }
 
-@keyframes fade-in-right-header {
+@keyframes move-left-to-right {
   from {
-    opacity: 0;
-    transform: translate(-55%, -50%);
+    left: 80%;
+    opacity: 0.5;
   }
   to {
+    left: 50%;
     opacity: 1;
-    transform: translate(-50%, -50%);
+  }
+}
+@keyframes move-right-to-left {
+  from {
+    left: 20%;
+    opacity: 0.5;
+  }
+  to {
+    left: 50%;
+    opacity: 1;
   }
 }
 
-.mainImg{
-  height:400px;
-  animation: fade-in-down ease 2.5s forwards;
-  animation-delay: 1s;
-  opacity: 0;
+.moveRight:hover{
+  left: 20%;
+  opacity: 1;
 }
 
-.mainImgMobile{
-  height:300px;
-  margin-bottom: -30px;
-  animation: fade-in-down ease 2.5s forwards;
-  animation-delay: 1s;
-  opacity: 0;
+.splashContainer{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  cursor: none;
 }
 
-.headerName{
-  font-size: 10vh;
-  line-height: 1;
-  color: white;
-  font-weight: 800;
-  margin: 0;
+.splashImg{
+  height: 45%;
+  max-height: 480px;
+  z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: fade-in-right-header ease 1.5s forwards;
+  transform: translate(-50%,-50%);
+  transition: all .2s;
 }
 
-.tagTopLeft{
+.splashImgColor{
+  background: #744123;
+}
+
+.splashImgColor:hover{
+  animation: blinking-bar .2s forwards infinite;
+}
+
+.splashImg:hover{
+  height: 52%;
+  max-height: 405px;
+}
+
+.splashBanner{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 42px;
+  font-weight: 500;
+  margin-top: 12px;
+  z-index: 10;
   position: absolute;
-  top:20px;
-  left:20px;
-  font-size: 4vh;
-  font-weight: 200;
-  color: white;
-  opacity: 0;
-  animation: fade-in-down ease 1s forwards;
-  animation-delay: 0.3s;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all .2s;
 }
 
-.contentTopLeft{
-  position: absolute;
-  top:20px;
-  left:20px;
-  font-size: 1em;
-  font-weight: 200;
-  text-align: left;
-  padding: 10px 30px;
-  color: white;
-  height: 20px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-  max-height: 175px;
-  /* width: 30%; */
-  border-radius: 10px;
-  transform: translateX(-16vw);
+.splashBanner:hover{
+  font-size: 44px;
+  font-weight: 700;
+  animation: blinking .2s forwards infinite;
 }
 
-.contentTopLeftHeader{
-  font-size: 1.2em;
-  text-align: center !important;
-}
-
-.contentTopLeftMobile{
-  position: absolute;
-  top:20px;
-  left:20px;
-  font-size: 1em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-  height: 20px;
-  width: 80px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-}
-
-.contentTopLeft:hover{
-  height:auto;
-  background-color: white;
-  color: black;
-  transform: translateX(0vw);
-}
-
-.contentTopLeftOpen{
-  position: absolute;
-  top:20px;
-  left:20px;
-  font-size: 14px;
-  padding: 10px;
-  font-weight: 200;
-  text-align: left;
-  transition: all .5s;
-  overflow: hidden;
-  width: 65%;
-  height:auto;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.tagTopRight{
-  position: absolute;
-  top:20px;
-  right:20px;
-  font-size: 4vh;
-  font-weight: 200;
-  color: white;
-  opacity: 0;
-  animation: fade-in-down ease 1s forwards;
-  animation-delay: 0.6s;
-}
-
-.contentTopRight{
-  position: absolute;
-  top:20px;
-  right:20px;
-  font-size: 1em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-  height: 20px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-  max-height: 580px;
-  width: 25%;
-  border-radius: 10px;
-  transform: translateX(15vw);
-}
-
-.contentTopRightMobile{
-  position: absolute;
-  top:20px;
-  right:20px;
-  font-size: 3em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-  height: 20px;
-  width: 80px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-}
-
-.contentTopRight:hover{
-  height:auto;
-  background-color: white;
-  color: black;
-  transform: translateX(0vw);
-}
-
-.contentTopRightOpen{
-  position: absolute;
-  top:20px;
-  right:20px;
+.splashSubBanner{
+  font-family: 'Source Code Pro', monospace;
   font-size: 16px;
-  padding: 10px;
   font-weight: 200;
-  text-align: center;
-  transition: all .5s;
-  overflow: hidden;
-  width: 60%;
-  height:auto;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.tagBottomLeft{
   position: absolute;
-  bottom:20px;
-  left:20px;
-  font-size: 4vh;
-  font-weight: 200;
-  color: white;
-  opacity: 0;
-  animation: fade-in-up ease 1s forwards;
-  animation-delay: 0.9s;
+  top: calc(77% + 50px);
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-.contentBottomLeft{
+.splashMouse{
   position: absolute;
-  bottom:20px;
-  left:20px;
-  padding: 10px;
-  font-size: 1em;
-  font-weight: 200;
-  text-align: center;
-  height: 20px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-  max-height: 440px;
-  width: 20%;
-  border-radius: 10px;
-  transform: translateX(-10vw);
-}
-
-.contentBottomLeftMobile{
-  position: absolute;
-  bottom:20px;
-  left:20px;
-  font-size: 1em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-  height: 20px;
-  width: 80px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-}
-
-.contentBottomLeft:hover{
-  padding: 0;
-  height:auto;
-  background-color: white;
-  color: black;
-  transform: translateX(0vw);
-}
-
-.contentBottomLeftOpen{
-  position: absolute;
-  bottom:20px;
-  left:20px;
-  font-size: 20px;
-  font-weight: 200;
-  text-align: center;
-  transition: all .5s;
-  overflow: hidden;
-  width: 60%;
-  height:auto;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.tagBottomRight{
-  position: absolute;
-  bottom:20px;
-  right:20px;
-  font-size: 4vh;
-  font-weight: 200;
-  color: white;
-  opacity: 0;
-  animation: fade-in-up ease 1s forwards;
-  animation-delay: 1.2s;
-}
-
-.contentBottomRight{
-  position: absolute;
-  bottom:20px;
-  right:20px;
-  font-size: 1em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  height: 20px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-  max-height: 248px;
-  width: 20%;
-  border-radius: 10px;
-  transform: translateX(10vw);
-}
-
-.contentBottomRightMobile{
-  position: absolute;
-  bottom:20px;
-  right:20px;
-  font-size: 1em;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-  height: 20px;
-  width: 80px;
-  background-color: transparent;
-  color: transparent;
-  transition: all .5s;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.contentBottomRight:hover{
-  height:auto;
-  background-color: white;
-  color: black;
-  transform: translateX(0vw);
-}
-
-.contentBottomRightOpen{
-  position: absolute;
-  bottom:20px;
-  right:20px;
-  font-size: 20px;
-  padding: 10px;
-  font-weight: 200;
-  text-align: center;
-  transition: all .5s;
-  overflow: hidden;
-  width: 70%;
-  height:auto;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  max-height: 90%;
-  cursor: pointer;
-}
-
-.imgBottomLeft{
-  width: 120%;
-  object-fit: cover;
-  margin-top: 5px;
   z-index: -1;
-  margin-bottom: -20px;
-}
-
-.workImg{
-  height:60px;
-  transition: all .2s;
-  z-index: 999;
+  transform: translate(-50%,-50%);
+  animation: blinking-circle .5s forwards infinite;
   border-radius: 50%;
 }
 
-.workImgMobile{
-  width:25%;
+.webText{
+  font-family: 'Source Code Pro', monospace;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 200;
+  color: #111;
   transition: all .2s;
-  z-index: 999;
-  border-radius: 50%;
+  z-index: 10;
 }
 
-.workImg:hover{
-  height: 70px;
+.webText:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #111;
+  animation: blinking-bar .2s forwards infinite;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.webText:hover:after { 
+  width: 80%; 
+  left: 10%; 
+  animation: blinking-bar .2s forwards infinite;
 }
 
-.contactImg{
-  height:60px;
-  opacity: .1;
-  transition: all .2s;
-  display: inline-block;
-  margin: 10px;
+.webText:hover{
+  font-size: 26px;
+  font-weight: 400;
+  animation: blinking .2s forwards infinite;
 }
 
-.contactImgMobile{
-  width: 35%;
-  opacity: .1;
-  transition: all .2s;
-  display: inline-block;
-  margin: 5px 20px;
+.topLeft{
+  top: 6%;
+  left: 6%;
 }
-.contactImg:hover{
-  height:70px;
-  opacity: .3;
+
+.topRight{
+  top: 6%;
+  right: 6%;
+}
+
+.bottomLeft{
+  bottom: 6%;
+  left: 6%;
+}
+
+.bottomRight{
+  bottom: 6%;
+  right: 6%;
+}
+
+@keyframes blinking {
+  from{
+      color: #4285F4;
+  }
+  to {
+      color: #F4B400;
+  }
+}
+
+@keyframes blinking-bar {
+  from{
+      background: #4285F4;
+  }
+  50% {
+      background: #F4B400;
+  }
+  100%{
+      background: #4285F4;
+  }
+}
+
+@keyframes blinking-circle {
+  0%{
+      border: 1px solid #4285F4;
+      height: 20px;
+      width: 20px;
+  }
+  50% {
+      border: 1px solid #F4B400;
+      height: 30px;
+      width: 30px;
+  }
+  100%{
+      border: 1px solid #4285F4;
+      height: 20px;
+      width: 20px;
+  }
+}
+
+.leftBody{
+  position: absolute;
+  top: 18%;
+  left: 12%;
+  width: 32%;
+  height: 40%;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.5;
+  color: #777;
+  opacity: 0;
+  animation: fade-in-from-left 1s forwards ease;
+  animation-delay: .5s;
+}
+
+.rightBody{
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  width: 32%;
+  height: 40%;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: right;
+  line-height: 1.5;
+  color: #777;
+  opacity: 0;
+  animation: fade-in-from-right 1s forwards ease;
+  animation-delay: .5s;
+}
+
+@keyframes fade-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%)
+  }
+}
+
+@keyframes fade-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%)
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px){
+  @keyframes move-right {
+    from {
+    }
+    to {
+      left: 100%;
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes move-left {
+    from {
+    }
+    to {
+      left: 0%;
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes move-left-to-right {
+    from {
+      left: 100%;
+      opacity: 0.5;
+    }
+    to {
+      left: 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes move-right-to-left {
+    from {
+      left: 0%;
+      opacity: 0.5;
+    }
+    to {
+      left: 50%;
+      opacity: 1;
+    }
+  }
+
+  .leftBody{
+    left: 8%;
+    width: 48%;
+    font-size: 12px;
+  }
+  
+  .rightBody{
+    right: 8%;
+    width: 48%;
+    font-size: 12px;
+  }
+
+  .splashBanner{
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .splashSubBanner{
+    width: 100%;
+  }
 }
