@@ -27,7 +27,7 @@ a{
 
 .mediaImgFull{
   display: inline-block;
-  width: 100%;
+  max-height: 80%;
   animation: fade-in-from-left 1s forwards ease;
 }
 
@@ -117,6 +117,8 @@ a{
 
 .splashImgColor{
   background: #744123;
+  background-position: center;
+  background-size: 90% 90%;
 }
 
 .splashImgColor:hover{
@@ -313,6 +315,26 @@ a{
   }
 }
 
+.mediaImgContainer{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #00000088;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 900;
+  flex-direction: column;
+}
+
+.mediaImgClose{
+  font-size: 24px;
+  padding: 12px;
+  z-index: 901;
+  color: #eee;
+}
+
 
 
 
@@ -322,9 +344,16 @@ a{
 
 @media only screen and (max-width: 800px){
   .splashContainer{
-    height: calc(100vh - 112px);
-    margin-bottom: 112px;
+    height: calc(100vh - 84px);
+    margin-bottom: 84px;
   }
+
+  .mediaImg{
+    width: 48%;
+    margin: 1%;
+    min-width: 90px;
+  }
+
   @keyframes move-right {
     from {
     }

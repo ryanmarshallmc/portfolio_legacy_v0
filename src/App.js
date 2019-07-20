@@ -127,9 +127,9 @@ class App extends React.Component {
     }
     else{
       return(
-        <div className='leftBody'>
+        <div className='mediaImgContainer' onClick={()=>this.setState({photo: null})}>
           <img className='mediaImgFull' src={this.state.photo}/>
-          <div style={{textDecoration:'underline',color:'blue'}} onClick={()=>this.setState({photo: null})}>&lt; back</div>
+          <div className='mediaImgClose' onClick={()=>this.setState({photo: null})}>close</div>
         </div>
       )
     }
