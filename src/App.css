@@ -323,7 +323,7 @@ a{
 @media only screen and (max-width: 800px){
   .splashContainer{
     height: calc(100vh - 112px);
-    padding-bottom: 112px;
+    margin-bottom: 112px;
   }
   @keyframes move-right {
     from {
