@@ -227,7 +227,7 @@ a{
       color: #4285F4;
   }
   to {
-      color: #F4B400;
+      color: #C0C0C0;
   }
 }
 
@@ -236,7 +236,7 @@ a{
       background: #4285F4;
   }
   50% {
-      background: #F4B400;
+      background: #C0C0C0;
   }
   100%{
       background: #4285F4;
@@ -250,7 +250,7 @@ a{
       width: 20px;
   }
   50% {
-      border: 1px solid #F4B400;
+      border: 1px solid #C0C0C0;
       height: 30px;
       width: 30px;
   }
@@ -285,7 +285,7 @@ a{
   height: 40%;
   font-size: 18px;
   font-weight: 300;
-  text-align: right;
+  text-align: left;
   line-height: 1.5;
   color: #777;
   opacity: 0;

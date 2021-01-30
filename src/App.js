@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   followMouse(e){
-    this.setState({ mouseX: e.screenX, mouseY: e.screenY-112 });
+    this.setState({ mouseX: e.screenX, mouseY: e.screenY-125 });
   }
 
   renderCursorLine(){
@@ -62,10 +62,10 @@ class App extends React.Component {
   renderWeb(){
     return(
       <span>
-        <div className='webText topLeft' style={this.state.view === 'background' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('background')}>background</div>
-        <div className='webText topRight' style={this.state.view === 'projects' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('projects')}>projects</div>
-        <div className='webText bottomLeft' style={this.state.view === 'media' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('media')}>media</div>
-        <div className='webText bottomRight' style={this.state.view === 'contact' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('contact')}>contact</div>
+        <div className='webText topLeft' style={this.state.view === 'background' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('background')}>Background</div>
+        <div className='webText topRight' style={this.state.view === 'projects' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('projects')}>Projects</div>
+        <div className='webText bottomLeft' style={this.state.view === 'media' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('media')}>Media</div>
+        <div className='webText bottomRight' style={this.state.view === 'contact' ? {fontWeight: '700', color:'#4285F4'} : null} onClick={()=>this.setView('contact')}>Contact</div>
         {this.renderCursorLine()}
       </span>
     )
@@ -78,16 +78,11 @@ class App extends React.Component {
         <br style={{lineHeight:'2.4'}}/>
         I'm a Vice President of Software Engineering for <a href='https://www.jpmorganchase.com/' target='_blank' rel="noopener noreferrer">JPMorgan Chase</a> based in Newark, DE.
         <br style={{lineHeight:'2.4'}}/>
+        <br style={{lineHeight:'2.4'}}/>
         I'm a graduate of both Case Western Reserve University (2014, B.S. Computer Engineering) and Drexel University (2018, M.S. Software Engineering).
         <br style={{lineHeight:'2.4'}}/>
-        As a researcher, I've worked with Northwestern's&nbsp;
-        <a href='https://tidal.northwestern.edu/' target='_blank' rel="noopener noreferrer">TIDAL Lab</a>&nbsp;
-        and <a href='http://music.cs.northwestern.edu/' target='_blank' rel="noopener noreferrer">Interactive Audio Lab</a>.
         <br style={{lineHeight:'2.4'}}/>
-        I love all things UI/UX, Ed-Tech, and cooperative. As someone who came to CS&nbsp;
-        late in the game, I want to help demystify what it means to be a "coder".
-        <br style={{lineHeight:'2.4'}}/>
-        More on me <a href='/resume.pdf' target='_blank' rel="noopener noreferrer">here</a>.
+        More on me <a href='/mchenry-scott-resume.pdf' target='_blank' rel="noopener noreferrer">here</a>.
       </div>
     )
   }
@@ -99,13 +94,10 @@ class App extends React.Component {
         <br/>
         A cross-platform mobile application I originally created during my time working for the US Navy.  This mobile app calculates an enlistd US Sailor's projected Final Multiple Scores (FMS), which determines their eligibility for advancement to higher pay grades during their service.
         <br style={{lineHeight:'2.4'}}/>
-        <b><a href='http://accompani.io' target='_blank' rel="noopener noreferrer">Accompani</a></b>
-        <br/>
-        A machine-learning powered harmonizer and lead-sheet generator. Trained on over 3,000 lead sheets and customizable by genre, chord frequency, and key signature.
         <br style={{lineHeight:'2.4'}}/>
-        <b><a href='http://predictivepolitics.xyz' target='_blank' rel="noopener noreferrer">Predictive Politics</a></b>
+        <b><a href='https://www.public.navy.mil/navwar/peomlb/Documents/SWP/FS_NJIS.pdf' target='_blank' rel="noopener noreferrer">NJIS</a></b>
         <br/>
-        An election prediction application built on twitter scraping, with modular, scalable source data and real time model construction.
+        The Naval Justice Information System (NJIS) is a Web-based system that provides access to 50,000 Navy and Marine Corps users worldwide and serves as the Department of the Navy’s (DON) end-to-end criminal justice case management system.
         <br style={{lineHeight:'2.4'}}/>
       </div>
     )
@@ -136,7 +128,7 @@ class App extends React.Component {
   renderContact(){
     return(
       <div className='rightBody'>
-        <b>Here are all of my social media handles, in case you need to contact me:</b>
+        <b>Here are my social media profiles and my email:</b>
         <br style={{lineHeight:'2.4'}}/>
         <a href='https://github.com/scottmc500' target='_blank' rel="noopener noreferrer">GitHub</a>: @scottmc500
         <br style={{lineHeight:'2.4'}}/>
