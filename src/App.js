@@ -74,13 +74,11 @@ class App extends React.Component {
   renderBackground(){
     return(
       <div className='leftBody'>
-        <b>Hi. I'm Ryan.</b>
+        <b>My name is Scott M. McHenry.</b>
         <br style={{lineHeight:'2.4'}}/>
-        I'm a product manager for <a href='http://blpt.co' target='_blank' rel="noopener noreferrer">Blueprint</a> in Chicago.
+        I'm a Vice President of Software Engineering for <a href='https://www.jpmorganchase.com/' target='_blank' rel="noopener noreferrer">JPMorgan Chase</a> based in Newark, DE.
         <br style={{lineHeight:'2.4'}}/>
-        I graduated from Northwestern in 2019 with a double major in Computer Science and Music Engineering, 
-        and continue to teach software workshops at Northwestern's startup incubator,&nbsp;
-        <a href='https://thegarage.northwestern.edu/' target='_blank' rel="noopener noreferrer">The Garage</a>.
+        I'm a graduate of both Case Western Reserve University (2014, B.S. Computer Engineering) and Drexel University (2018, M.S. Software Engineering).
         <br style={{lineHeight:'2.4'}}/>
         As a researcher, I've worked with Northwestern's&nbsp;
         <a href='https://tidal.northwestern.edu/' target='_blank' rel="noopener noreferrer">TIDAL Lab</a>&nbsp;
@@ -158,8 +156,8 @@ class App extends React.Component {
       return(
         <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
             <img  src='/me.png' className='splashImg splashImgColor' alt='me' onClick={()=>this.setView('splash')}/>
-            <div className='splashBanner'> Ryan McHenry.</div>
-            <div className='splashSubBanner'>software, product, etc.</div>
+            <div className='splashBanner'> Scott M. McHenry</div>
+            <div className='splashSubBanner'>Software Engineer</div>
             <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
             {this.renderWeb()}
           </div>
