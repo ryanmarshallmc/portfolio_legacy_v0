@@ -107,17 +107,17 @@ class App extends React.Component {
     if (!this.state.photo){
       return(
         <div className='leftBody'>
-          <img className='mediaImg' src='/media_1.jpg' alt='OH NO!!!' onClick={()=>this.setState({photo:'/media_1.jpg'})}/>
-          <img className='mediaImg' src='/media_2.jpg' alt='OH NO!!!' onClick={()=>this.setState({photo:'/media_2.jpg'})}/>
-          <img className='mediaImg' src='/media_3.jpg' alt='OH NO!!!' onClick={()=>this.setState({photo:'/media_3.jpg'})}/>
-          <img className='mediaImg' src='/media_4.jpg' alt='OH NO!!!' onClick={()=>this.setState({photo:'/media_4.jpg'})}/>
+          <img className='mediaImg' src='/media_1.jpg' alt='me' onClick={()=>this.setState({photo:'/media_1.jpg'})}/>
+          <img className='mediaImg' src='/media_2.jpg' alt='me' onClick={()=>this.setState({photo:'/media_2.jpg'})}/>
+          <img className='mediaImg' src='/media_3.jpg' alt='me' onClick={()=>this.setState({photo:'/media_3.jpg'})}/>
+          <img className='mediaImg' src='/media_4.jpg' alt='me' onClick={()=>this.setState({photo:'/media_4.jpg'})}/>
         </div>
       )
     }
     else{
       return(
         <div className='mediaImgContainer' onClick={()=>this.setState({photo: null})}>
-          <img className='mediaImgFull' src={this.state.photo}/>
+          <img className='mediaImgFull' alt='me' src={this.state.photo}/>
           <div className='mediaImgClose' onClick={()=>this.setState({photo: null})}>close</div>
         </div>
       )
