@@ -97,10 +97,9 @@ class App extends React.Component {
   renderProjects(){
     return(
       <div className='rightBody'>
-        <b><a href='http://blpt.co' target='_blank' rel="noopener noreferrer">Blueprint Alpha</a></b>
+        <b><a href='https://apps.apple.com/us/app/fms-calculator/id1031676371' target='_blank' rel="noopener noreferrer">FMS Calculator</a></b>
         <br/>
-        Lots of projects, from scraping, to computer vision, to predictive investing,
-        to <a href='https://www.ballotready.org/' target='_blank' rel="noopener noreferrer">BallotReady</a>, and some super-secret-in-the-works type stuff;)
+        A cross-platform mobile application I originally created during my time working for the US Navy.  This mobile app calculates an enlistd US Sailor's projected Final Multiple Scores (FMS), which determines their eligibility for advancement to higher pay grades during their service.
         <br style={{lineHeight:'2.4'}}/>
         <b><a href='http://accompani.io' target='_blank' rel="noopener noreferrer">Accompani</a></b>
         <br/>
@@ -139,19 +138,17 @@ class App extends React.Component {
   renderContact(){
     return(
       <div className='rightBody'>
-        <b>Places you can find me on the in-ter-webs:</b>
+        <b>Here are all of my social media handles, in case you need to contact me:</b>
         <br style={{lineHeight:'2.4'}}/>
-        <a href='https://github.com/ryanmchenry2' target='_blank' rel="noopener noreferrer">GitHub</a>: @ryanmchenry2
+        <a href='https://github.com/scottmc500' target='_blank' rel="noopener noreferrer">GitHub</a>: @scottmc500
         <br style={{lineHeight:'2.4'}}/>
-        <a href='https://linkedin.com/in/ryanmchenry2' target='_blank' rel="noopener noreferrer">LinkedIn</a>: @ryanmchenry2
+        <a href='https://linkedin.com/in/scottmmchenry' target='_blank' rel="noopener noreferrer">LinkedIn</a>: @scottmmchenry
         <br style={{lineHeight:'2.4'}}/>
-        <a href='https://facebook.com/ryanmchenry2' target='_blank' rel="noopener noreferrer">Facebook</a>: @ryanmchenry2
+        <a href='https://www.facebook.com/smchenry2014' target='_blank' rel="noopener noreferrer">Facebook</a>: Scott McHenry
         <br style={{lineHeight:'2.4'}}/>
-        <a href='mailto:ryanmchenry2@gmail.com'>Gmail</a>: @ryanmchenry2
+        <a href='mailto:smchenry2014@gmail.com'>Gmail</a>: smchenry2014@gmail.com
         <br style={{lineHeight:'2.4'}}/>
         I always love to hear about projects, opportunities, and crazy-wild-aspiration-dreams that will likely never come to fruition but are still fun to talk about.
-        <br style={{lineHeight:'2.4'}}/>
-        Reach out - let's talk. Safe to say, it's probably <b>@ryanmchenry2</b> on whatever website you can think up.
       </div>
     )
   }
