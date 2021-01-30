@@ -92,7 +92,7 @@ class App extends React.Component {
       <div className='rightBody'>
         <b><a href='https://apps.apple.com/us/app/fms-calculator/id1031676371' target='_blank' rel="noopener noreferrer">FMS Calculator</a></b>
         <br/>
-        A cross-platform mobile application I originally created during my time working for the US Navy.  This mobile app calculates an enlistd US Sailor's projected Final Multiple Scores (FMS), which determines their eligibility for advancement to higher pay grades during their service.
+        A cross-platform mobile application I originally created during my time working for the US Navy.  This mobile app calculates an enlisted US Sailor's projected Final Multiple Scores (FMS), which determines their eligibility for advancement to higher pay grades during their service.
         <br style={{lineHeight:'2.4'}}/>
         <br style={{lineHeight:'2.4'}}/>
         <b><a href='https://www.public.navy.mil/navwar/peomlb/Documents/SWP/FS_NJIS.pdf' target='_blank' rel="noopener noreferrer">NJIS</a></b>
@@ -138,7 +138,7 @@ class App extends React.Component {
         <br style={{lineHeight:'2.4'}}/>
         <a href='mailto:smchenry2014@gmail.com'>Gmail</a>: smchenry2014@gmail.com
         <br style={{lineHeight:'2.4'}}/>
-        I always love to hear about projects, opportunities, and crazy-wild-aspiration-dreams that will likely never come to fruition but are still fun to talk about.
+        I am always new software projects and challenges, so feel free to reach out with anything interesting.
       </div>
     )
   }
