@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   followMouse(e){
-    this.setState({ mouseX: e.screenX, mouseY: e.screenY - 135 });
+    this.setState({ mouseX: e.screenX, mouseY: e.screenY - 110 });
   }
 
   renderCursorLine(){
