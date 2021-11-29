@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   followMouse(e){
-    this.setState({ mouseX: e.screenX, mouseY: e.screenY-125 });
+    this.setState({ mouseX: e.screenX, mouseY: e.screenY });
   }
 
   renderCursorLine(){
@@ -133,8 +133,6 @@ class App extends React.Component {
         <a href='https://github.com/scottmc500' target='_blank' rel="noopener noreferrer">GitHub</a>: @scottmc500
         <br style={{lineHeight:'2.4'}}/>
         <a href='https://linkedin.com/in/scottmmchenry' target='_blank' rel="noopener noreferrer">LinkedIn</a>: @scottmmchenry
-        <br style={{lineHeight:'2.4'}}/>
-        <a href='https://www.facebook.com/smchenry2014' target='_blank' rel="noopener noreferrer">Facebook</a>: Scott McHenry
         <br style={{lineHeight:'2.4'}}/>
         <a href='mailto:smchenry2014@gmail.com'>Gmail</a>: smchenry2014@gmail.com
         <br style={{lineHeight:'2.4'}}/>
