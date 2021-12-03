@@ -141,6 +141,12 @@ class App extends React.Component {
     )
   }
 
+  printMessage() {
+    fetch("/helloworld")
+     .then(resp => resp.text())
+     .then(text => console.log(text));
+  }
+
   render(){
     if (this.state.view === 'splash'){
       return(
@@ -148,6 +154,7 @@ class App extends React.Component {
             <img  src='/me.png' className='splashImg splashImgColor' alt='me' onClick={()=>this.setView('splash')}/>
             <div className='splashBanner'> Scott M. McHenry</div>
             <div className='splashSubBanner'>Software Engineer</div>
+            <div className='button' onClick></div>
             <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
             {this.renderWeb()}
           </div>
