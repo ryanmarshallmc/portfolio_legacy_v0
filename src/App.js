@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      name: "Scott M. McHenry",
       isMobile: window.innerWidth < 800 ? true : false,
       mouseX:0,
       mouseY:0,
@@ -141,7 +142,8 @@ class App extends React.Component {
     )
   }
 
-  printMessage() {
+  printMessage(e) {
+    console.log(e);
     fetch("/helloworld")
      .then(resp => resp.text())
      .then(text => console.log(text));
