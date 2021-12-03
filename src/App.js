@@ -153,8 +153,7 @@ class App extends React.Component {
         <div className="splashContainer" onMouseMove={this.followMouse.bind(this)}>
             <img  src='/me.png' className='splashImg splashImgColor' alt='me' onClick={()=>this.setView('splash')}/>
             <div className='splashBanner'> Scott M. McHenry</div>
-            <div className='splashSubBanner'>Software Engineer</div>
-            <div className='button' onClick></div>
+            <div className='splashSubBanner' onClick={this.printMessage.bind(this)}>Software Engineer</div>
             <div className='splashMouse' style={{top:this.state.mouseY,left:this.state.mouseX}}></div>
             {this.renderWeb()}
           </div>
